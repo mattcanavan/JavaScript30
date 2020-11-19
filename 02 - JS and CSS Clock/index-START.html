@@ -76,7 +76,7 @@
         const secondsDegrees = (seconds / 60) * 360;
 
         const minutes = now.getMinutes();
-        const minutesDegrees = (minutes / 60) * 360; // 59min = 354deg;
+        const minutesDegrees = ((minutes + (seconds/60)) / 60) * 360; // 59min = 354deg;
 
         const hours = now.getHours();
         const hoursDegrees = ((hours + minutes / 60) / 24) * 360;
